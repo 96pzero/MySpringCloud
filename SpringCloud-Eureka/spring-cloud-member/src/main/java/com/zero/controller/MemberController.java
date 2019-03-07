@@ -1,6 +1,4 @@
-package com.zero.controller;
-
-import java.util.ArrayList;
+﻿import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -12,6 +10,7 @@ public class MemberController {
 	
 	@Value("${server.port}")
 	private String port;
+
 	@RequestMapping("/getMemberAll")
 	public List<String> getMemberAll(){
 		List<String> userlist = new ArrayList<String>();
