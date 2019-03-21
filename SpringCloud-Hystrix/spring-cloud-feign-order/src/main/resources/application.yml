@@ -1,0 +1,26 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+
+server:
+  port: 8765
+  tomcat:
+    max-threads: 50
+
+spring:
+  application:
+    name: service-order-feign
+
+feign:
+  hystrix:
+    enabled: true
+
+###超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
